@@ -1,0 +1,80 @@
+<body>
+  <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <!----------------------- Login Container -------------------------->
+      <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <!--------------------------- Left Box ----------------------------->
+        <div class="col-md-6 right-box ">
+          <div class="row align-items-center">
+            <div class="header-text mb-4">
+              <h3 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  font-weight: 400; color: crimson;">Explore. <br>
+                Dream. <br> Discover.</h3>
+            </div>
+
+            <div class="input-group mb-3 form-group">
+              <input formControlName="username" 
+              [ngClass]="{'is-invalid': submitted && signupform.controls['username'].errors}" 
+              type="text" class="form-control form-control-lg bg-light fs-6"
+               placeholder="User name" required>
+              <div *ngIf="submitted && signupform.controls['username'].errors" class="text-danger">
+              <div *ngIf="submitted && signupform.controls['username'].errors['required']" class="text-danger">
+                User Name is required!!
+             
+             </div>
+              </div>
+            </div>
+
+            <div class="input-group mb-3 form-group">
+              <input formControlName="email" [ngClass]="{'is-invalid': submitted && signupform.controls['email'].errors}" type="email" class="form-control form-control-lg bg-light fs-6" placeholder="email address" required>
+              <div *ngIf="submitted && signupform.controls['email'].errors" class="text-danger">
+                {{ getemailValidationMessage() }}        
+                </div>
+            </div>
+
+            <div class="input-group mb-3 form-group">
+              <input formControlName="phoneNumber" [ngClass]="{'is-invalid': submitted && signupform.controls['phoneNumber'].errors}" type="number" class="form-control form-control-lg bg-light fs-6" placeholder="Phone Number" required>
+              <div *ngIf="submitted && signupform.controls['phoneNumber'].errors" class="text-danger">
+                {{ getPhoneNumberValidationMessage() }}
+              </div>
+            </div>
+
+            <div class="input-group mb-3 form-group">
+              <input
+                formControlName="password"
+                [ngClass]="{'is-invalid': submitted && signupform.controls['password'].errors}"
+                type="password"
+                class="form-control form-control-lg bg-light fs-6"
+                placeholder="password"
+                required
+              >
+              <div *ngIf="submitted && signupform.controls['password'].errors" class="text-danger">
+                <div *ngIf="signupform.controls['password'].hasError('required')">password is required!</div>
+                <div *ngIf="signupform.controls['password'].hasError('minlength')">password must be at least 8 characters long!</div>
+                <div *ngIf="signupform.controls['password'].hasError('pattern')">password must contain at least one uppercase letter, one lowercase letter, one number, and one special character!</div>
+              </div>
+              <small *ngIf="!signupform.controls['password'].hasError('required')">{{ getpasswordValidationMessage() }}</small>
+            </div>
+            
+            <div class="input-group mb-3 form-group">
+              <button class="btn btn-lg btn-primary w-100 fs-6">Sign Up</button>
+            </div>
+
+            <div class="row">
+              <small>Already have an account? <a routerLink="/">Login</a></small>
+            </div>
+          </div>
+        </div>
+
+        <!-------------------- ------ Right Box ---------------------------->
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+          <div class="featured-image mb-3">
+            <img src="../../assets/plainlogo.png" class="img-fluid" style="width: 250px;">
+          </div>
+          <p class="text-danger fs-2 fw-bold" style="font-family:'Brush Script MT', cursive; font-weight: 400;">Be Verified</p>
+          <small class="text-pink text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Escape and breathe the air of new places.</small>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>

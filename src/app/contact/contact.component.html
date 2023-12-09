@@ -1,0 +1,80 @@
+<!-- contact-form.component.html -->
+<body>
+    <div class="container">
+      <div class="row py-5 g-3  justify-content-center">
+        <div class="col-md-6 first_col" style="width: 500px; height: 600px;">
+          <h1 class="text-center mt-3" style="font-family: sans-serif; font-style: italic; font-weight: 400; font-size: 40px; color: #d81063;">Get in touch!!</h1>
+         
+          <div *ngIf="submitted" class="alert alert-success mt-3">
+            Form successfully submitted!
+          </div>
+          <form [formGroup]="contactForm" class="p-4 mt-5" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="FormControlInput1" class="form-label">Enter Your Name</label>
+              <input type="text" class="form-control" id="FormControlInput1" placeholder="Full Name" formControlName="name">
+              <div *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched" class="text-danger">
+               Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="FormControlInput2" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="FormControlInput2" placeholder="name@example.com" formControlName="email">
+              <div *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched" class="text-danger">
+                Email is required.
+              </div>
+              <div *ngIf="contactForm.get('email')?.hasError('email') && contactForm.get('email')?.touched" class="text-danger">
+                Invalid email format.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="FormControlTextarea1" class="form-label">Let Us know your requirements</label>
+              <textarea class="form-control" id="FormControlTextarea1" rows="3" formControlName="requirements"></textarea>
+              <div *ngIf="contactForm.get('requirements')?.hasError('required') && contactForm.get('requirements')?.touched" class="text-danger">
+                Requirements are required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">
+                <i class="fas fa-paper-plane"></i> Submit
+              </button>
+                </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="../../assets/contact.jpg" class="img-fluid" alt="contact image">
+            </div>
+        </div>
+        <div class="row-last">
+            <div class="row row-cols-1 row-cols-md-3  p-3 text-white">
+                <div class="col">
+                    <h4>CALL US</h4>
+                    <p style="font-size: 12px;">+9999999999 <br>       
+                      +1022710-(227) <br>
+                      (000)-xxxxxxxxxx</p>
+                </div>
+                <div class="col">
+                    <h4>LOCATION</h4>
+                    <address style="font-size: 12px;">GetAwayGURU,<br>
+                      NO.10227,SpringBoot Street,
+                      AngularField,
+                      JFD state, Edubridge City, India
+                    
+                  </address>
+                   
+                </div>
+                <div class="col">
+                    <h4>Email</h4>
+                    <p style="font-size: 12px;">contact.getawayguru.com <br>
+                   support.getawayguru.com <br>
+                   getawaygurua.gmail.com<br>
+                   navya_.getawayguru.com</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Embark on a journey with Get Away GURU and let us transform your
+             travel dreams into cherished memories.</p>
+    </footer>
+</body>

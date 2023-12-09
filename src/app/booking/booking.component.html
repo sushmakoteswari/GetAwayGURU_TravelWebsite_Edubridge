@@ -1,0 +1,27 @@
+<!-- booking.component.html -->
+
+<div *ngIf="destination" class="booking-details">
+  <h2>Booking Details for {{ destination.title }}</h2>
+
+  <!-- Category buttons -->
+  <div class="category-buttons">
+    <button class="category-button" [class.active]="selectedCategory === 'affordable'" (click)="selectCategory('affordable')">Affordable</button>
+    <button class="category-button" [class.active]="selectedCategory === 'luxury'" (click)="selectCategory('luxury')">Luxury</button>
+    <button class="category-button" [class.active]="selectedCategory === 'coupleFriendly'" (click)="selectCategory('coupleFriendly')">Couple Friendly</button>
+  </div>
+
+  <!-- Package Cards Container -->
+  <div class="package-cards">
+    <!-- Package Card -->
+    <div class="package-card" *ngFor="let package of packages">
+      <!-- Display package details with FontAwesome icons and image -->
+      <div class="package-details">
+        <img src="{{ package.image }}" alt="{{ package.name }} Image" class="package-image" />
+        <p class="package-name">{{ package.name }}</p>
+        <p class="package-description">{{ package.description }}</p>
+        <p class="package-price">₹ {{ package.price }}</p>
+        <button class="book-now-button"  (click)="BookNow()">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>

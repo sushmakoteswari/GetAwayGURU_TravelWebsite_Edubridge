@@ -1,0 +1,62 @@
+<body>
+    
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <!----------------------- Login Container -------------------------->
+     <div class="row border rounded-5 p-3 bg-white shadow box-area">
+  <!--------------------------- Left Box ----------------------------->
+     <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+     
+         <div class="featured-image mb-3">
+          <img src="../../assets/plainlogo.png" class="img-fluid" style="width: 250px;
+          
+          ">
+         </div>
+         <p class="text-danger fs-2 fw-bold" style="font-family:'Brush Script MT', cursive; font-weight: 400;">Be Verified</p>
+         <small class="text-pink text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Escape and breathe the air of new places.</small>
+     </div> 
+  <!-------------------- ------ Right Box ---------------------------->
+  
+     <div class="col-md-6 right-box">
+        <div class="row align-items-center">
+              <div class="header-text mb-4">
+                   <h2 style="font-family:'Brush Script MT', cursive; font-weight: bold;
+                   color: cadetblue;">Hello,Again</h2>
+                   <p style="font-family: 'Courier New', Courier, monospace; color: cadetblue; font-weight: 200;">We are happy to have you back.</p>
+              </div>
+              <div class="input-group mb-3 form-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input formControlName="username" [ngClass]="{'is-invalid': submitted && loginform.controls['username'].errors}" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="username address" required>
+              </div>
+              
+              <div class="input-group mb-1 form-group">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <input formControlName="password" [ngClass]="{'is-invalid': submitted && loginform.controls['password'].errors}" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="password" required>
+              </div>
+              <div class="input-group mb-5 d-flex justify-content-between">
+                <div class="form-check">
+                  <input type="checkbox" formControlName="rememberMe" class="form-check-input" id="formCheck">
+                  <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
+                </div>
+                <div class="forgot">
+                  <small><a href="#">Forgot password?</a></small>
+                </div>
+              </div>
+              
+              <div class="input-group mb-3">
+                <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
+              </div>
+              
+              <div class="row">
+                  <small>Don't have account? <a routerLink="/signup">Sign Up</a></small>
+              </div>
+        </div>
+     </div> 
+     
+    </div>
+
+  </div>
+  </form>
+</body>

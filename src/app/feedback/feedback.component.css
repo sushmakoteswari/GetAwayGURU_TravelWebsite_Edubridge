@@ -1,0 +1,133 @@
+/* feedback.component.css */
+
+/* Body Styling */
+body {
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+/* Box Area Styling */
+.box-area {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  width: 950px;
+  height: 450px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  resize: none;
+}
+
+img{
+  width: 450px;
+  height: 450px;
+}
+
+/* Feedback Form Styling */
+.feedback-form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: none;
+}
+
+/* Span Styling */
+span {
+  background-color: #f2f2f2;
+  border: none;
+  color: grey;
+}
+
+/* Hover Effect on Span */
+span:hover {
+  background-color: #d81063;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input and Textarea Styling */
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  resize: none;
+}
+
+/* Message Textarea Height */
+#message {
+  height: 170px;
+  resize: none;
+}
+
+/* Remove Border from Name and Email Inputs */
+#name,
+#email {
+  border: none;
+}
+
+/* Label with Icon Styling */
+.label-icon {
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+/* Input Group Styling */
+.input-group {
+  position: relative;
+  border: none;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #d9534f; /* Bootstrap's danger color */
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+  background-color: #e7659b;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Hover Effect on Primary Button */
+.btn-primary:hover {
+  background-color: #d81063; /* Darker shade on hover */
+}
+
+footer {
+  background-image: radial-gradient( circle 325px at 19.2% 64.8%,  rgba(254,62,101,1) 9.7%, rgba(166,24,146,1) 91.3% );
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 1em;
+  background-color: #4285f4;
+  color: #fff;
+  margin-top: auto;
+  
+}

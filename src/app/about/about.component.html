@@ -1,0 +1,85 @@
+
+<!-- about.component.html -->
+<body>
+    
+<header>
+    <h1>About Us</h1>
+    <p>Your Ultimate Destination for Dream Vacations</p>
+
+</header>
+    
+    
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    
+       <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+        
+            <section [ngClass]="{'expanded': isExpanded}" id="about-section">
+    
+
+                <div *ngIf="!isExpanded">
+                    
+                        Welcome to <h3><strong>Get Away GURU,</strong></h3> where we turn your travel dreams into reality. We believe in crafting unforgettable experiences for every traveler, providing comprehensive solutions for your perfect getaway.
+                    
+                    <h3><b>Our Mission</b></h3>
+                    <p>At Get Away GURU, we are dedicated to being your ultimate guide in planning and experiencing the perfect getaway. Our mission is to cater to every traveler's fantasy, ensuring a journey filled with unique and delightful moments.</p>
+            
+                    <p class="read-more" (click)="toggleReadMore()" style="color: white; font-weight: 600;"> Read More</p>
+                </div>
+            
+                <div *ngIf="isExpanded">
+                    Welcome to <h3><strong>Get Away GURU,</strong></h3> where we turn your travel dreams into reality. We believe in crafting unforgettable experiences for every traveler, providing comprehensive solutions for your perfect getaway.
+                    
+                    <h3><b>Our Mission</b></h3>
+                    <p>At Get Away GURU, we are dedicated to being your ultimate guide in planning and experiencing the perfect getaway. Our mission is to cater to every traveler's fantasy, ensuring a journey filled with unique and delightful moments.</p>
+                    
+                    <h3><b>What Sets Us Apart</b></h3>            
+                    <p>What makes Get Away GURU exceptional is our commitment to providing comprehensive travel solutions. From flights and accommodations to transportation, activities, and culinary delights, we meticulously curate every aspect of your journey.</p>
+                    
+                    <h3><b>What We Offer</b></h3>
+                    <ul>
+                        <li>Flights and Accommodations</li>
+                        <li>Transportation Services</li>
+                        <li>Curated Activities</li>
+                        <li>Culinary Delights</li>
+                    </ul>
+                    <p class="read-more" (click)="toggleReadMore()" style="color: white; font-weight: 600;"> Read Less</p>
+                </div>
+            </section>
+        
+        
+        
+        </div>
+
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+        
+        
+            <section [ngClass]="{'expanded': isExpanded}" id="about-section">
+    
+
+                <div *ngIf="!isExpanded">
+                    <img src="../../assets/Get Away Guru/japan/cherryblossom.jpg" >
+                    <img src="../../assets/Get Away Guru/bali/af1.jpg" >
+                    
+                </div>
+            
+                <div *ngIf="isExpanded">
+                    <img src="../../assets/Get Away Guru/japan/cherryblossom.jpg" >
+                    <img src="../../assets/Get Away Guru/bali/af1.jpg">
+                    <img src="../../assets/Get Away Guru/coorg/af5.jpg" >
+                    <img src="../../assets/Get Away Guru/maldives/cf1.jpg" >
+                </div>
+            </section>
+        
+        
+        </div>
+
+       </div></div>
+
+
+
+<footer>
+    <p>Embark on a journey with Get Away GURU and let us transform your
+         travel dreams into cherished memories.</p>
+</footer>
+</body>

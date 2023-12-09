@@ -1,0 +1,50 @@
+<!-- holiday.component.html -->
+
+<div class="holiday-container">
+  <div class="Welcome-container">
+  <h1>Welcome to Holiday Packages</h1>
+  <p style="text-align: center; color: white;">Explore our exciting holiday packages in India and International</p>
+</div>
+
+
+  <div class="destination-box">
+  <!-- National Destinations Container -->
+  <div class="destination-container">
+    <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: cadetblue;"><b>National Destinations</b></h2><br>
+    <div class="destination-row" #nationalDestinationsRow>
+      <div *ngFor="let nationalDestination of nationalDestinations" class="destination-card">
+        <img [src]="nationalDestination.image" alt="{{ nationalDestination.title }}" />
+        <h3>{{ nationalDestination.title }}</h3>
+        <p>{{ nationalDestination.description }}</p>
+        <button (click)="bookHoliday(nationalDestination)" routerLink="/booking">Book Now</button>
+      </div>
+    </div>
+    <div class="arrow-buttons">
+      <button (click)="scroll(nationalDestinationsRow,-1)">&lt;</button>
+      <button (click)="scroll(nationalDestinationsRow, 1)">&gt; </button>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="destination-box inter">
+  <!-- International Destinations Container -->
+  <div class="destination-container">
+    <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: cadetblue;"><b>International Destinations</b></h2>
+    <div class="destination-row" #internationalDestinationsRow>
+      <div *ngFor="let internationalDestination of internationalDestinations" class="destination-card">
+        <img [src]="internationalDestination.image" alt="{{ internationalDestination.title }}" />
+        <h3>{{ internationalDestination.title }}</h3>
+        <p>{{ internationalDestination.description }}</p>
+        <button (click)="bookHoliday(internationalDestination)" routerLink="/booking">Book Now</button>
+      </div>
+    </div>
+    <div class="arrow-buttons">
+      <button (click)="scroll(internationalDestinationsRow, -1)"> &lt; </button>
+      <button (click)="scroll(internationalDestinationsRow, 1)"> &gt; </button>
+    </div>
+  </div>
+</div>
+</div>

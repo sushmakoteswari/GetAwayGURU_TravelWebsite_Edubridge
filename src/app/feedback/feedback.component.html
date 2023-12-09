@@ -1,0 +1,69 @@
+<!-- feedback.component.html -->
+<body>
+  <h4 class="text-left fs-1 mt-3 text-white"><strong>Feedback</strong></h4>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+      <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box">
+        <div class="featured-image mb-3">
+          <img src="../../assets/feedback.png" alt="feedback image">
+        </div>
+      </div>
+  
+      <div class="col-md-6 right-box">
+        <div class="row align-items-center">
+          <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()" class="feedback-form">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" id="name" formControlName="name" class="form-control" placeholder="Your Name" />
+              </div>
+              <div *ngIf="feedbackForm.get('name')?.hasError('required') && feedbackForm.get('name')?.touched" class="error-message">
+                <i class="fas fa-exclamation-circle"></i> Name is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" id="email" formControlName="email" class="form-control" placeholder="Your Email" />
+              </div>
+              <div *ngIf="feedbackForm.get('email')?.hasError('required') && feedbackForm.get('email')?.touched" class="error-message">
+                <i class="fas fa-exclamation-circle"></i> Email is required.
+              </div>
+              <div *ngIf="feedbackForm.get('email')?.hasError('email') && feedbackForm.get('email')?.touched" class="error-message">
+                <i class="fas fa-exclamation-circle"></i> Invalid email format.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <div class="input-group">
+                <textarea
+                  id="message"
+                  formControlName="message"
+                  class="form-control"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div *ngIf="feedbackForm.get('message')?.hasError('required') && feedbackForm.get('message')?.touched" class="error-message">                 
+                <i class="fas fa-exclamation-circle"></i>
+                Feedback message is required.
+              </div>
+            </div>
+  
+            <button type="submit" class="btn btn-primary"  [disabled]="!feedbackForm.valid">
+              <i class="fas fa-paper-plane"></i> Submit Feedback
+            </button>
+          </form>     
+          <div *ngIf="submitted" class="alert alert-success mt-3">
+            Form successfully submitted!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Embark on a journey with Get Away GURU and let us transform your
+         travel dreams into cherished memories.</p>
+</footer>
+</body> 

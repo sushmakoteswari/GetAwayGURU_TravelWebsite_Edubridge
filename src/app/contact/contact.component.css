@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+
+}
+
+.first_col {
+    background-color: white;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    width: 350px;
+    left: 155px;
+    top: 171px;
+    border-radius: 10px;
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #e7659b;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Hover Effect on Primary Button */
+  .btn-primary:hover {
+    background-color: #d81063; /* Darker shade on hover */
+  }
+
+.img-fluid {
+    border-radius: 20px;
+    max-width: 450px;
+    max-height: fit-content;
+}
+
+.row-last {    
+    width: 50% !important;
+    position: relative !important;
+    left: 350px;
+    top: 50px;
+    bottom: 20px;
+    height: 200px;
+    padding-bottom: 100px !important;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    border-radius: 25px;
+    margin-bottom: 100px;
+
+}
+
+
+.form-control {
+    height: 42px;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 10px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e7659b;
+}
+textarea{
+    min-height: 90px;
+    resize: none;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid #e7659b;;
+  
+}
+@media only screen and (max-width: 600px) {
+    .first_col {
+        position: initial;
+        left: 0 !important;
+    }
+
+    .sec_col {
+        order: 1 !important;
+    }
+
+    .row-last {
+        left: 0 !important;
+        width: 100% !important;
+        height: 500px !important;
+        top: 0 !important;
+    }
+}

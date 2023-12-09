@@ -1,0 +1,58 @@
+<div class="container">
+    <h1 class="text-center mt-3">Admin Operations</h1>
+    <form [formGroup]="adminForm" (ngSubmit)="onSubmit()" class="p-4 mt-5">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+        <div *ngIf="adminForm.get('name')?.hasError('required') && adminForm.get('name')?.touched" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" formControlName="description"></textarea>
+        <div *ngIf="adminForm.get('description')?.hasError('required') && adminForm.get('description')?.touched" class="text-danger">
+          Description is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" formControlName="location">
+        <div *ngIf="adminForm.get('location')?.hasError('required') && adminForm.get('location')?.touched" class="text-danger">
+          Location is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-control" id="category" formControlName="category">
+          <option value="" disabled selected>Select a category</option>
+          <option value="affordable">affordable</option>
+          <option value="luxury">luxury</option>
+          <option value="coupleFriendly">coupleFriendly</option>
+        </select>
+        <div *ngIf="adminForm.get('category')?.hasError('required') && adminForm.get('category')?.touched" class="text-danger">
+          Category is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" id="price" formControlName="price">
+        <div *ngIf="adminForm.get('price')?.hasError('required') && adminForm.get('price')?.touched" class="text-danger">
+          Price is required.
+        </div>
+        <div *ngIf="adminForm.get('price')?.hasError('pattern') && adminForm.get('price')?.touched" class="text-danger">
+          Invalid price format.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="photo" class="form-label">Photo</label>
+        <input type="file" class="form-control" id="photo" formControlName="photo">
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="!adminForm.valid">
+          <i class="fas fa-paper-plane"></i> Submit
+        </button>
+      </div>
+    </form>
+  </div>
+  

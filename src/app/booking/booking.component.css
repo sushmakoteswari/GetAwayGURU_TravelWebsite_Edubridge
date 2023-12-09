@@ -1,0 +1,104 @@
+/* booking.component.css */
+
+.booking-details {
+    padding: 20px;
+  }
+
+  h2{
+   font-family: 'Brush Script MT', cursive;
+   font-weight: 900;
+   color: #d81063;
+  text-decoration-color: #d81063;
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-button {
+    background-color: #e7659b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .category-button:hover {
+    background-color: #d81063;
+  }
+  
+  .category-button.active {
+    background-color: #d81063;
+  }
+  
+  .package-cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;    
+    justify-content: center; /* Center the cards horizontally */
+  }
+  
+  .package-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    background: rgb(238,174,202);
+    background: linear-gradient(301deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    flex-direction: column; /* Stack the contents vertically */
+    align-items: center;
+    justify-content: center; /* Center the contents horizontally */
+  }
+  
+  .package-details {
+    text-align: left;
+   width: 100%; /* Ensure text takes full width within the card */
+  }
+  
+.package-name{
+  font-weight: 700;
+}
+
+  .package-details img {
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .package-details p {
+    margin: 0;
+  }
+  
+  .package-price {
+    font-weight: bold;
+  }
+  
+  /* Add more styles as needed */
+  button {
+    background-color: #e7659b;
+    color: white;
+    border: none;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px; 
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #d81063;
+  }
+  
