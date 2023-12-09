@@ -1,7 +1,8 @@
 
 # GetAwayGuru: Your Ultimate Travel Companion
 
-![GetAwayGuru Logo](images/logo.png)
+![GetAwayGuru Logo](![GetAwayGuru](https://github.com/sushmakoteswari/GetAwayGURU_TravelWebsite_Edubridge/assets/93698513/2779ff0b-51e4-48a5-8fbc-a0f46730b9a5)
+)
 
 Welcome to GetAwayGuru, your go-to platform for seamless travel package bookings. Whether you're planning a relaxing beach getaway, an adventurous mountain trek, or a cultural exploration, GetAwayGuru is here to make your travel dreams a reality.
 
